@@ -1,0 +1,14 @@
+ /* Style the video: 100% width and height to cover the entire window */
+ #myVideo {
+    position: fixed;
+     }
+  
+     #vc{
+        text-align: center;
+        color: #f1f1f1;
+        margin: 100px;
+        padding-left: 25vw;
+        position: fixed;
+        padding-top: 15vw;
+        font-size: 6vw;
+     }
