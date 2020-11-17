@@ -1,2 +1,23 @@
- /* Style the video: 100% width and height to cover the entire window */
+.logo{
+    min-height: 0px;
+}
+
+.nav{
+cursor: pointer;
+}
+
+.text-background {
+    position: absolute;
+    bottom: 91px;
+    right: 20px;
+    background-color: transparent;
+    color:white;
+    padding-left: 20px;
+    padding-right: 397px;
+    font-size: 100px;
+}
+
+.background{
+
+}
 
