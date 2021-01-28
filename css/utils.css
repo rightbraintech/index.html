@@ -1,0 +1,10 @@
+#logo{
+	filter: invert(100%);
+}
+ #title{
+ 	filter: invert(100%);
+ }
+
+ .home{
+ 	color: white;
+ }
