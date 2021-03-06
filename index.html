@@ -6,6 +6,7 @@
     <title>RIGHT BRAIN TECH</title>
     <link rel="stylesheet" href="./css/tailwind.css" />
     <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/hover.css">
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
   </head>
   <body>
@@ -22,9 +23,11 @@
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mr-5 hover:text-gray-900">HOME</a>
-          <a class="mr-5 hover:text-gray-900">STORE</a>
-          <a class="mr-5 hover:text-gray-900">ABOUT US</a>
+        <input id="searchbar" onkeyup="search_website()" type="text"
+        name="search" placeholder="Search"> 
+          <a class="mr-5 hover:text-gray-900 cursor-pointer" style="padding-left: 50px;">HOME</a>
+          <a class="mr-5 hover:text-gray-900 cursor-pointer">STORE</a>
+          <a class="mr-5 hover:text-gray-900 cursor-pointer">ABOUT US</a>
         </nav>
         <button
           class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
@@ -130,11 +133,30 @@
           </div>
         </div>
         <button
-          class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          class="  flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
         >
           Button
         </button>
       </div>
     </section>
+   
+
+<!-- ordered list -->
+<ol id='list'> 
+    <li class="items">Cat</li> 
+    <li class="items">Dog</li> 
+    <li class="items">Elephant</li> 
+    <li class="items">Fish</li> 
+    <li class="items">Gorilla</li> 
+    <li class="items">Monkey</li> 
+    <li class="items">Turtle</li> 
+    <li class="items">Whale</li> 
+    <li class="items">Aligator</li> 
+    <li class="items">Donkey</li> 
+    <li class="items">Horse</li> 
+</ol> 
+  
+<!-- linking javscript -->
+<script src="./js/script.js"></script> 
   </body>
 </html>
