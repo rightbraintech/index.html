@@ -6,17 +6,25 @@
     <title>RIGHT BRAIN TECH</title>
     <link rel="stylesheet" href="./css/tailwind.css" />
     <link rel="stylesheet" href="./css/utils.css" />
-    <link rel="stylesheet" href="./css/hover.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/mdb.min.css">  
+    <link rel="stylesheet" href="./css/hover.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <img src="./assets/logo.svg" alt="" width="30" height="30" id="logo">
-        <a class="navbar-brand  " href="#">Right Brain Tech</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./assets/logo.svg" alt="" width="30" height="30" id="logo" />
+        <a class="navbar-brand" href="#">Right Brain Tech</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -25,24 +33,39 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Category</a>
             </li>
-           
+
             <li class="nav-item">
-              <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#" 
+                >About us</a
+              >
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" onchange="openPage()">
+ 
         </div>
       </div>
     </nav>
 
-    <button onclick="topFunction()" id="myBtn"><img src="./assets/arrow.svg" alt="" width="30" height="30" id="arrow"></button>
-<script src="./js/script.js"></script> 
-<script src="./js/bootstrap.bundle.js"></script>
-<script src="./js/mdb.min.js"></script>
+  </button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/arrow.svg" alt="" id="arrow" width="30" height="30"></button>
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script>
+      function openPage() {
+          var x = document.getElementById("search").value;
+
+          if (x === "dog") {
+              window.open("/index.html");
+          }
+
+          if (x === "cat") {
+              window.open("/customizedalert.html");
+          }
+
+      }
+  </script>
+
   </body>
 </html>
