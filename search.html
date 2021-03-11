@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIGHT BRAIN TECH</title>
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/hover.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark  bg-dark">
+      <div class="container-fluid">
+        <img src="./assets/logo.svg" alt="" width="30" height="30" id="logo" />
+        <a class="navbar-brand" href="#">Right Brain Tech</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./search.html">Search By List</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search By Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" 
+                >About us</a
+              >
+            </li>
+          </ul>
+ 
+        </div>
+      </div>
+    </nav>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+    <br>
+    <button onclick="sortList()" class="btn btn-secondary sort">Sort by alphabetical order</button>
+
+    <ul class="myUL" id="id01">
+      <li><a href="#">hdele</a></li>
+      <li><a href="#">Agnes</a></li>
+    
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+    
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+    </ul>
+
+
+  </button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/arrow.svg" alt="" id="arrow" width="30" height="30"></button>
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script>
+      function sortList() {
+        var list, i, switching, b, shouldSwitch;
+        list = document.getElementById("id01");
+        switching = true;
+        /* Make a loop that will continue until
+        no switching has been done: */
+        while (switching) {
+          // start by saying: no switching is done:
+          switching = false;
+          b = list.getElementsByTagName("LI");
+          // Loop through all list-items:
+          for (i = 0; i < (b.length - 1); i++) {
+            // start by saying there should be no switching:
+            shouldSwitch = false;
+            /* check if the next item should
+            switch place with the current item: */
+            if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+              /* if next item is alphabetically
+              lower than current item, mark as a switch
+              and break the loop: */
+              shouldSwitch = true;
+              break;
+            }
+          }
+          if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark the switch as done: */
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switching = true;
+          }
+        }
+      }
+      </script>
+  </body>
+</html>
