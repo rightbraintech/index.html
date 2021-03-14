@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
 
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <style>
+    </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-dark  bg-dark">
+
+    
+    <nav class="navbar navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <img src="./assets/logo.svg" alt="" width="30" height="30" id="logo" />
+        <img src="./assets/logo.svg" alt="" width="30" height="30" class="logo" />
         <a class="navbar-brand" href="#">Right Brain Tech</a>
         <button
           class="navbar-toggler"
@@ -31,14 +35,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./search.html">Search By List</a>
+              <a class="nav-link" href="./search.html">Search By List</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="#">Search By Category</a>
+              <a class="nav-link" href="./feedback.html">request and feedback center</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" 
@@ -50,14 +54,18 @@
         </div>
       </div>
     </nav>
-
+<br>
+<br>
+<br>
    
     <div>
-      <input type="text" id="myInput" placeholder="Search for names..">
+ 
+      <input class="search" type="text"  id="myInput" placeholder="Search" aria-label="Search" >
       <ul id="container">
-          <li class="myLinks"><a href="#" id="nico">Nico Nico Nii!!</a></li>
-          <li class="myLinks"><a href="#" id="redbone">Childish Gambino - Redbone</a></li>
-          <li class="myLinks"><a href="#" id="americaf">America </a></li>
+          <li class="mylinks"><a class="links" href="./Android.apps/hungamaapk.html" >Hungama</a></li>
+          <li class="mylinks"><a class="links" href="#" ></a></li>
+          <li class="mylinks"><a class="links" href="#" ></a></li>
+          <li class="mylinks"><a class="links" href="#" ></a></li>
   </ul>
   </div>
 
@@ -70,7 +78,7 @@
          //search bar
 function myFunction() {
 var input, filter;
-input = document.getElementsByClassName('myLinks');
+input = document.getElementsByClassName('mylinks');
 filter = document.getElementById('myInput').value.toUpperCase();
 // Loop through all list items, and hide those who don't match the search query
 for (i = 0; i < input.length; i++) {
