@@ -42,7 +42,7 @@ body{
   height: 100vh;
   position: absolute;
   top: 0;
-margin-left: 20px;
+margin-right: 20px;
 }
 .background-vid {
   position: relative;
@@ -64,6 +64,7 @@ margin-left: 20px;
     justify-content: center;
     color: rgb(255, 255, 255);
     font-size: 80px;
+  
   }
 }
 @media only screen and (min-width: 800px) {
@@ -96,4 +97,33 @@ margin-left: 20px;
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+}
+#me{
+border-radius: 100%;
+width: 200px;
+height: 210px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.aboutme{
+  text-align: center;
+  display: flexbox;
+  padding: 10px;
+}
+@media only screen and (max-width: 600px){
+  #me{
+    border-radius: 100%;
+    width: 100px;
+    height: 110px;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+    }
+}
+#gmailbtn{
+  text-decoration: none;
+  color: black;
 }
