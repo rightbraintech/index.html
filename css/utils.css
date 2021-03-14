@@ -1,5 +1,5 @@
-#logo {
-  margin-right: 5px;
+.logo {
+
   filter: invert(100%);
 }
 #title {
@@ -30,4 +30,49 @@
 }
 #arrow {
   filter: invert(100%);
+}
+#bgvid{
+  object-fit: cover;
+  width: 100vw;
+  height:100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.background-vid{
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+
+}
+@media only screen and (min-width: 600px){
+  .background-vid{
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+  
+  }
+}
+@media only screen and (min-width: 800px){
+  .background-vid{
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+  
+  }
 }
