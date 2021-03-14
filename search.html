@@ -51,21 +51,15 @@
       </div>
     </nav>
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
-    <br>
-    <button onclick="sortList()" class="btn btn-secondary sort">Sort by alphabetical order</button>
-
-    <ul class="myUL" id="id01">
-      <li><a href="#">hdele</a></li>
-      <li><a href="#">Agnes</a></li>
-    
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-    
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
-    </ul>
+   
+    <div>
+      <input type="text" id="myInput" placeholder="Search for names..">
+      <ul id="container">
+          <li class="myLinks"><a href="#" id="nico">Nico Nico Nii!!</a></li>
+          <li class="myLinks"><a href="#" id="redbone">Childish Gambino - Redbone</a></li>
+          <li class="myLinks"><a href="#" id="americaf">America </a></li>
+  </ul>
+  </div>
 
 
   </button>
@@ -73,38 +67,23 @@
     <script src="./js/script.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script>
-      function sortList() {
-        var list, i, switching, b, shouldSwitch;
-        list = document.getElementById("id01");
-        switching = true;
-        /* Make a loop that will continue until
-        no switching has been done: */
-        while (switching) {
-          // start by saying: no switching is done:
-          switching = false;
-          b = list.getElementsByTagName("LI");
-          // Loop through all list-items:
-          for (i = 0; i < (b.length - 1); i++) {
-            // start by saying there should be no switching:
-            shouldSwitch = false;
-            /* check if the next item should
-            switch place with the current item: */
-            if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-              /* if next item is alphabetically
-              lower than current item, mark as a switch
-              and break the loop: */
-              shouldSwitch = true;
-              break;
-            }
-          }
-          if (shouldSwitch) {
-            /* If a switch has been marked, make the switch
-            and mark the switch as done: */
-            b[i].parentNode.insertBefore(b[i + 1], b[i]);
-            switching = true;
-          }
-        }
-      }
+         //search bar
+function myFunction() {
+var input, filter;
+input = document.getElementsByClassName('myLinks');
+filter = document.getElementById('myInput').value.toUpperCase();
+// Loop through all list items, and hide those who don't match the search query
+for (i = 0; i < input.length; i++) {
+    var currentElem = input[i];
+    var currentElemChild = input[i].children[0]
+    if (currentElemChild.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        currentElem.style.display = "";
+    } else {
+        currentElem.style.display = "none";
+    }
+  }
+}
+document.getElementById('myInput').addEventListener('keyup', myFunction);
       </script>
   </body>
 </html>
