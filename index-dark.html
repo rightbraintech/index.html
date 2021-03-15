@@ -7,84 +7,35 @@
     <title>RIGHT BRAIN TECH</title>
     <link rel="stylesheet" href="./css/tailwind.css" />
     <link rel="stylesheet" href="./css/utils.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <style>
-     *{padding:0;margin:0;}
-
-body{
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:18px;
-	background-color:#CCC;
-}
-
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	left:40px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.my-float{
-	margin-top:22px;
-}
-    </style>
-
+    <link rel="stylesheet" href="./css/style.css">
+    
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
   </head>
   <body style="overflow-x:hidden ;">
 
-    
-    <nav class="navbar navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <img src="./assets/logo.svg" alt="" width="30" height="30" class="logo" />
-        <a class="navbar-brand" href="#">Right Brain Tech</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./search.html">Search By List</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./article.html"> Articles</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="./feedback.html">request and feedback center</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./aboutme.html" 
-                >About me</a
-              >
-            </li>
-          </ul>
+  
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0 pointer" style="margin-top: 20px;">
+       <img src="./assets/logo.svg" alt="" class="logo" width="30" height="30">
+            <span class="ml-3 text-xl">Right Brain Tech <br>  <h6>Tech That Matters</h6></span>
+        </a>
  
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a  class="mr-5 hover:text-white pointer in-order">Home</a>
+            <a class="mr-5 hover:text-white pointer in-order">Help center</a>
+            <a class="mr-5 hover:text-white pointer in-order">Search By List</a>
+            <a class="mr-5 hover:text-white pointer in-order">About us</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" style="margin-bottom: 30px;">Light-Mode
+        <img src="./assets/sun.svg" alt="" width="30" height="30">
+          </button>
         </div>
+      </header>
+      <div class="background-img">
+        <img src="./assets/home.jpg" alt="Snow" style="width:100%;">
+        <div class="centered">WELCOME</div>
       </div>
-    </nav>
-    <video playsinline autoplay muted loop  id="bgvid">
-      <source src="./assets/2.mp4" type="video/mp4" >
-    </video>
-    <h1 class="background-vid">Welcome <br> To <br> Right Brain Tech</h1>
    
     <section class="text-gray-400 bg-gray-900 body-font ">
       
@@ -158,10 +109,10 @@ body{
       </span>
     </div>
   </footer>
-<!-- Footer -->
-  </button>
+
     <script src="./js/script.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/stylejs.js"></script>
     
   </body>
 </html>
