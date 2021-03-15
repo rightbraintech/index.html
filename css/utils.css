@@ -1,3 +1,8 @@
+html{
+  overflow-x: hidden;
+}
+
+
 body{
   scroll-behavior: smooth;
 }
@@ -36,49 +41,7 @@ body{
 #arrow {
   filter: invert(100%);
 }
-#bgvid {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-margin-right: 20px;
-}
-.background-vid {
-  position: relative;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  font-size: 50px;
-}
-@media only screen and (min-width: 600px) {
-  .background-vid {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    font-size: 80px;
-  
-  }
-}
-@media only screen and (min-width: 800px) {
-  .background-vid {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    font-size: 100px;
-  }
-}
+
 .search{
   outline: none;
   padding: 50px;
@@ -128,9 +91,73 @@ display: block;
   text-decoration: none;
   color: black;
 }
-#under{
-
-width: 80%;
-height: 100%;
+.pointer{
+  cursor: pointer;
 
 }
+.background-img {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 600px){
+  .background-img {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+  
+  }
+}
+@media only screen and (max-width: 450px){
+  .background-img {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
