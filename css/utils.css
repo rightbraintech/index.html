@@ -33,10 +33,12 @@ body{
   padding: 15px; /* Some padding */
   border-radius: 100px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
+  margin-bottom: 25px;
 }
 
 #myBtn:hover {
   background-color: rgb(61, 60, 60); /* Add a dark-grey background on hover */
+ 
 }
 #arrow {
   filter: invert(100%);
@@ -87,10 +89,7 @@ display: block;
     }
     
 }
-#gmailbtn{
-  text-decoration: none;
-  color: black;
-}
+
 .pointer{
   cursor: pointer;
 
@@ -160,4 +159,19 @@ display: block;
   background-color: #ddd;
   color: black;
 }
-
+ 
+.nav-links{
+  text-decoration: none;
+  color: black;
+  
+}
+:hover.nav-links{
+  text-decoration: none;
+  color: rgb(105, 103, 103);
+}
+.dark-nav-links{
+color: white;
+}
+:hover.dark-nav-links{
+  color: rgb(199, 202, 202);
+}
