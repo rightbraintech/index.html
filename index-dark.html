@@ -23,44 +23,76 @@
     border-radius: 50px;
 }
     </style>
- 
-    
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
   </head>
   <body style="overflow-x:hidden ;">
 
   
-    <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-3 fixed w-full z-10 top-0">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0 pointer" style="margin-top: 20px;">
-          <img src="./assets/logo.svg" alt=""  width="30" height="30" class="logo">
-               <span class="ml-3 text-xl" style="color: rgb(255, 255, 255);">Right Brain Tech <br>  <h6><small> Tech That Matters</small> </h6></span>
-           </a>
+    <header class="z-30 w-full px-2 py-4 bg-gray-900 sm:px-4">
+      <div class="flex items-center justify-between mx-auto max-w-7xl">
+        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+         <img src="./assets/logo.svg" alt="" class="logo" width="30" height="30">
+          <span class="ml-3 text-xl" >Right Brain Tech</span>
+        </a>
+        <div class="flex items-center space-x-1">
+          <div class="hidden space-x-1 md:inline-flex">
+            <a href="./search.html" class="btn btn-sm btn-link dark-nav-links" style="padding: 5px;">Home</a>
+            <a href="#" class="btn btn-sm btn-link dark-nav-links" style="padding: 5px;">Search</a>
+            <a href="#" class="btn btn-sm btn-link dark-nav-links" style="padding: 5px;">About</a>
+            <a href="#" class="btn btn-sm btn-link dark-nav-links" style="padding: 5px;">Help Centre</a>
+           </div>
+          <button class="inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-400 rounded text-base mt-4 md:mt-0 mode-btn" style=" color: black;" ><a href="./index-dark.html" style="text-decoration: none; color: rgb(0, 0, 0); margin-right: 8px;"> Light-Mode</a>
+            <img src="./assets/sun.svg" alt="" width="30" height="30">
+           
+              </button>
+          <div class="inline-flex md:hidden" x-data="{ open: false }">
+            <button class="flex-none px-2 btn btn-link btn-sm logo" @click="open = true" style="padding: 20px;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="w-5 h-5"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <span class="sr-only">Open Menu</span>
+            </button>
+            <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-gray-900 rounded shadow" x-show.transition="open" @click.away="open = false" x-cloak>
+              <button class="self-end flex-none px-2 ml-2 btn btn-link btn-icon logo" @click="open = false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span class="sr-only">Close Menu</span>
+              </button>
+              <a href="#" class="w-full btn btn-sm btn-link dark-nav-links">Home</a>
+              <a href="#" class="w-full btn btn-sm btn-link dark-nav-links">Search</a>
+              <a href="#" class="w-full btn btn-sm btn-link dark-nav-links">About</a>
+              <a href="#" class="w-full btn btn-sm btn-link dark-nav-links">Help centre</a>
+            </div>
+          </div>
+        </div>
       </div>
-  
-      <div class="block lg:hidden">
-        <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
-         <img class="fill-current w-3 logo" src="./assets/menu.svg" alt="">
-        </button>
-      </div>
-  
-      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
-          <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-white no-underline" href="#">Home</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Search By List</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Help Center</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </header> 
+
   
       <div class="background-img">
         <img src="./assets/home.jpg" alt="Snow" style="width:100%;">
@@ -120,7 +152,7 @@
     
     </section>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/arrow.svg" alt="" id="arrow" width="30" height="30"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/arrow.svg" alt="" id="arrow" width="30" height="30">GO TO TOP </button>
 
 <footer class="text-gray-400 bg-gray-900 body-font">
     <div class="container px-6 py-2 mx-auto flex items-center sm:flex-row flex-col">
@@ -149,12 +181,7 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <script>
-      //Javascript to toggle the menu
-      document.getElementById('nav-toggle').onclick = function(){
-        document.getElementById("nav-content").classList.toggle("hidden");
-      }
-    </script>
- 
+
+<script src="./js/script-2.js"></script>
   </body>
 </html>
