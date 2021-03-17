@@ -25,12 +25,10 @@ body{
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #555; /* Set a background color */
+  background-color:transparent; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  padding: 25px; /* Some padding */
   border-radius: 100px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   margin-bottom: 25px;
@@ -121,44 +119,16 @@ display: block;
     position: relative;
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 30px
   
   }
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+  .mode-btn{
+    font-size: 10px;
+    margin-bottom:15px ;
+
+  }
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
  
 .nav-links{
   text-decoration: none;
